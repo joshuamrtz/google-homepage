@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.center-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 10px;;
+    grid-template-areas: 
+    "google-logo google-logo"
+    "search-form search-form"
+    "search-btn lucky-btn";
+    align-items: center;
+    justify-items: center;
+    margin-top: 150px;
+}
+
+.google-logo {
+    grid-area: google-logo;
+}
+
+.search-form {
+    grid-area: search-form;
+    border-radius: 20px;
+    line-height: 40px;
+    border: 1px solid #d9d9d9;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-areas:
+    "search-icon search-bar mic-icon";
+}
+
+.search-icon {
+    grid-area: search-icon;
+}
+
+.search-bar {
+    min-width: 550px;
+    border: none;
+
+}
+
+.mic-icon {
+    grid-area: mic-icon;
+}
+
+.search-icon,
+.mic-icon {
+    display: grid;
+    align-items: center;
+    justify-self: center;   
+}
+
+.search-btn {
+    grid-area: search-btn;
+    justify-self: end;
+}
+
+.lucky-btn {
+    grid-area: lucky-btn;
+    justify-self: start;
+}
+
+button {
+    line-height: 30px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #595959;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+.profile-pic {
+    width: auto;
+    height: auto;
+    max-width: 30px;
+    max-height: 30px;
+    overflow: hidden;
+    margin: 7px 15px;
+    border-radius: 50%;
+}
+
+.apps-icon {
+    margin-top: 9px;
+}
+
+.navbar,
+.footer {
+    margin:0;
+    padding: 0;
+    line-height: 40px;
+}
+
+.navbar {
+    font-size: 13px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #d9d9d9;
+}
